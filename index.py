@@ -2,6 +2,8 @@
 from bilibili_api import video
 
 # B站视频编号（示例）
+# 在每个视频URL里面（如下所示）：
+# https://www.bilibili.com/video/BV1DK411p7Kz
 BVID = "BV1g5411a7vC"
 
 # 获取视频信息
