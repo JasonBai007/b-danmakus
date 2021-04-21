@@ -22,4 +22,5 @@ for dm in danmakus:
 # 写入文件
 filename = 'result.txt'
 with open(filename, 'w', encoding='utf-8') as file_object:
+    # 将List类型的数据转成字符串类型，转之前需要把里面的数值型的转成字符串型的
     file_object.write('\n'.join('%s' %id for id in danmakus))
