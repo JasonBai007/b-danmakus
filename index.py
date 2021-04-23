@@ -14,7 +14,7 @@ page_id = info["pages"][0]["cid"]
 danmakus = video.get_danmaku(bvid=BVID, page_id=page_id)
 
 # 写入文件
-filename = 'res_all.txt'
+filename = './res/res_all.txt'
 with open(filename, 'w', encoding='utf-8') as file_object:
     # 将List类型的数据转成字符串类型，转之前需要把里面的数值型的转成字符串型的
     file_object.write('\n'.join('%s' %id for id in danmakus))
@@ -26,11 +26,11 @@ for dm in danmakus:
     danTextList.append(dm.text)
 
 # 生成弹幕文本文件
-filename2 = 'res_text.txt'
+filename2 = './res/res_text.txt'
 with open(filename2, 'w', encoding='utf-8') as file_object:
     file_object.write('\n'.join(danTextList))
 
 # 生成弹幕JSON文件
-filename3 = 'res_text.json'
+filename3 = './res/res_text.json'
 with open(filename3, 'w', encoding='utf-8') as file_object:
     file_object.write(json.dumps(danTextList, indent=2, ensure_ascii=False))
