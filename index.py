@@ -1,18 +1,13 @@
 # 导入模块
 from bilibili_api import video
 import json
+from bvid import BVID
 
-# B站视频编号（示例）
-# 在每个视频URL里面（如下所示）：
-# https://www.bilibili.com/video/BV1g5411a7vC
-BVID = "BV1zz4y117Ly"
-
-# 获取视频信息
+# 获取视频信息并打印
 info = video.get_video_info(bvid=BVID)
-# 打印视频信息
 print(info)
 
-# 假设这里获取 p1 的最新弹幕信息，需要取出 page_id，即每 p 都有自己的编号
+# 假设这里获取 p1 的最新弹幕信息，需要取出 page_id，即每 p 都有自己的编号（我也不知道是啥意思）
 page_id = info["pages"][0]["cid"]
 
 # 然后开始获取弹幕
@@ -27,7 +22,7 @@ with open(filename, 'w', encoding='utf-8') as file_object:
 # 构建弹幕List
 danTextList = []
 for dm in danmakus:
-    # print(str(dm))
+    # 每条弹幕包括时间、内容等信息，是个Class
     danTextList.append(dm.text)
 
 # 生成弹幕文本文件
