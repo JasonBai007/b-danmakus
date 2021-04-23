@@ -13,7 +13,7 @@ pip install bilibili-api
 // 设置目标视频的bvid
 编辑 bvid.py 文件
 
-// 执行脚本
+// 执行脚本（生成视频信息文件+3种格式的弹幕文件）
 python index.py
 ```
 

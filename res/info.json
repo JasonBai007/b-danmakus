@@ -1,0 +1,82 @@
+{
+  "bvid": "BV1zz4y117Ly",
+  "aid": 587122002,
+  "videos": 1,
+  "tid": 124,
+  "tname": "社科人文",
+  "copyright": 1,
+  "pic": "http://i0.hdslb.com/bfs/archive/1c6fde0bb773cae0734701ce31dd9d81dddd8e94.png",
+  "title": "器官捐献协调员：她的心脏，可以给我么？",
+  "pubdate": 1615279825,
+  "ctime": 1615279825,
+  "desc": "他们是在活人身边等待死亡降临的秃鹫，\n他们是重病者心中带来第二生命的天使，\n把死亡中孕育的生机从这里送到那里。一边是死亡，一边是重生，他们是人体器官捐献协调员。",
+  "state": 0,
+  "duration": 294,
+  "rights": {
+    "bp": 0,
+    "elec": 0,
+    "download": 1,
+    "movie": 0,
+    "pay": 0,
+    "hd5": 1,
+    "no_reprint": 1,
+    "autoplay": 1,
+    "ugc_pay": 0,
+    "is_cooperation": 0,
+    "ugc_pay_preview": 0,
+    "no_background": 0,
+    "clean_mode": 0,
+    "is_stein_gate": 0
+  },
+  "owner": {
+    "mid": 1422302644,
+    "name": "怎样同学",
+    "face": "http://i1.hdslb.com/bfs/face/b61948a14449980f8d739145434e52955e6b5a66.jpg"
+  },
+  "stat": {
+    "aid": 587122002,
+    "view": 623680,
+    "danmaku": 1999,
+    "reply": 8730,
+    "favorite": 6862,
+    "coin": 2872,
+    "share": 1327,
+    "now_rank": 0,
+    "his_rank": 0,
+    "like": 39841,
+    "dislike": 0,
+    "evaluation": "",
+    "argue_msg": ""
+  },
+  "dynamic": "#死亡##新人##人文#世界上有那么一群人，每天奔波在医院和患者之间。一边是死亡，一边是重生，他们是人体器官捐献协调员。",
+  "cid": 308026730,
+  "dimension": {
+    "width": 1920,
+    "height": 1080,
+    "rotate": 0
+  },
+  "no_cache": false,
+  "pages": [
+    {
+      "cid": 308026730,
+      "page": 1,
+      "from": "vupload",
+      "part": "无片头版_1",
+      "duration": 294,
+      "vid": "",
+      "weblink": "",
+      "dimension": {
+        "width": 1920,
+        "height": 1080,
+        "rotate": 0
+      }
+    }
+  ],
+  "subtitle": {
+    "allow_submit": false,
+    "list": []
+  },
+  "user_garb": {
+    "url_image_ani_cut": ""
+  }
+}

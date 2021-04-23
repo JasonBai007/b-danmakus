@@ -6,6 +6,9 @@ from bvid import BVID
 # 获取视频信息并打印
 info = video.get_video_info(bvid=BVID)
 print(info)
+filename0 = './res/info.json'
+with open(filename0, 'w', encoding='utf-8') as file_object:
+    file_object.write(json.dumps(info, indent=2, ensure_ascii=False))
 
 # 假设这里获取 p1 的最新弹幕信息，需要取出 page_id，即每 p 都有自己的编号（我也不知道是啥意思）
 page_id = info["pages"][0]["cid"]
