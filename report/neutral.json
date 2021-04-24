@@ -1,0 +1,10 @@
+[
+    {
+        "id": 7,
+        "text": "钉钉时代报道",
+        "positive_prob": 0.549831,
+        "confidence": 0.00337243,
+        "negative_prob": 0.450169,
+        "sentiment": 1
+    }
+]

@@ -30,6 +30,13 @@ fs.writeFile(path.resolve(__dirname, './report/positive.json'), JSON.stringify(p
 fs.writeFile(path.resolve(__dirname, './report/negative.json'), JSON.stringify(n, null, 4), { encoding: 'utf8' }, err => {
     console.log('抽离负面数据成功！')
 })
+
+if (mNum > 0) {
+    fs.writeFile(path.resolve(__dirname, './report/neutral.json'), JSON.stringify(m, null, 4), { encoding: 'utf8' }, err => {
+        console.log('抽离中性数据成功！')
+    })
+}
+
 let report = `《${videoInfo.title}》弹幕情感分析报告：\n\n 该视频总计 ${total} 条弹幕 \n 正面情感弹幕 ${pNum} 条，占比 ${pRatio}% \n 负面情感弹幕 ${nNum} 条，占比 ${nRatio}% \n 中性情感弹幕 ${mNum} 条，占比 ${mRatio}%`
 fs.writeFile(path.resolve(__dirname, './report/report.txt'), report, { encoding: 'utf8' }, err => {
     console.log('分析报告生成完成！')
