@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const axios = require('axios')
-const danmu = require('./res/test.json')
+const danmu = require('./res/res_text.json') // 弹幕JSON数据
 const base_url = 'https://aip.baidubce.com/rpc/2.0/nlp/v1/sentiment_classify'
 const access_token = '' // your access token
 const charset = 'UTF-8' // 必须是这种编码
@@ -21,22 +21,28 @@ const file_path = path.resolve(__dirname, './result.json')
 
 function generateFile(data) {
     // 异步写入数据到文件
-    fs.writeFile(file_path, JSON.stringify(data, null, 4), { encoding: 'utf8' }, err => { })
+    fs.writeFile(file_path, JSON.stringify(data, null, 4), { encoding: 'utf8' }, err => {
+        console.log('附带情感值的弹幕数据 result.json 已生成')
+        console.log('执行 node report.js 生成分析报告')
+    })
 }
 
 let resArr = []
 let danmu_index = 0
+let danmuLength = danmu.length
 let intervalId = null
 intervalId = setInterval(() => {
     axios.post(request_url, { text: danmu[danmu_index] }).then(res => {
+        console.log(`正在分析第 ${danmu_index + 1}/${danmuLength} 条弹幕数据...`)
         resArr.push({
+            id: danmu_index,
             text: res.data.text,
             ...res.data.items[0]
         })
         danmu_index++;
-        if (danmu_index >= danmu.length) {
+        if (danmu_index >= danmuLength) {
             clearInterval(intervalId)
-            console.log(`Request ${danmu_index} times, done`)
+            console.log(`分析完毕，写入文件中...`)
             generateFile(resArr)
         }
     })
