@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const axios = require('axios')
-const danmu = require('./res/res_text.json') // 弹幕JSON数据
+const danmu = require('./danmu/danmu_text.json') // 弹幕JSON数据
 const base_url = 'https://aip.baidubce.com/rpc/2.0/nlp/v1/sentiment_classify'
 const access_token = '' // your access token
 const charset = 'UTF-8' // 必须是这种编码

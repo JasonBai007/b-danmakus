@@ -1,4 +1,6 @@
-const videoInfo = require('./res/info.json')
+const fs = require('fs')
+const path = require('path')
+const videoInfo = require('./danmu/info.json')
 const resultArr = require('./result.json')
 
 let p = resultArr.filter(obj => obj.sentiment === 2)
@@ -20,3 +22,15 @@ console.log(`该视频总计 ${total} 条弹幕`)
 console.log(`正面情感弹幕 ${pNum} 条，占比 ${pRatio}%`)
 console.log(`负面情感弹幕 ${nNum} 条，占比 ${nRatio}%`)
 console.log(`中性情感弹幕 ${mNum} 条，占比 ${mRatio}%`)
+console.log(`生成测试报告中...`)
+
+fs.writeFile(path.resolve(__dirname, './report/positive.json'), JSON.stringify(p, null, 4), { encoding: 'utf8' }, err => {
+    console.log('抽离正面数据成功！')
+})
+fs.writeFile(path.resolve(__dirname, './report/negative.json'), JSON.stringify(n, null, 4), { encoding: 'utf8' }, err => {
+    console.log('抽离负面数据成功！')
+})
+let report = `《${videoInfo.title}》弹幕情感分析报告：\n\n 该视频总计 ${total} 条弹幕 \n 正面情感弹幕 ${pNum} 条，占比 ${pRatio}% \n 负面情感弹幕 ${nNum} 条，占比 ${nRatio}% \n 中性情感弹幕 ${mNum} 条，占比 ${mRatio}%`
+fs.writeFile(path.resolve(__dirname, './report/report.txt'), report, { encoding: 'utf8' }, err => {
+    console.log('分析报告生成完成！')
+})
