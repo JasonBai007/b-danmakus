@@ -1,0 +1,23 @@
+[
+    {
+        "text": "人都必死无疑还要什么呢",
+        "positive_prob": 0.129566,
+        "confidence": 0.712075,
+        "negative_prob": 0.870434,
+        "sentiment": 0
+    },
+    {
+        "text": "中介而已！",
+        "positive_prob": 0.00701483,
+        "confidence": 0.984412,
+        "negative_prob": 0.992985,
+        "sentiment": 0
+    },
+    {
+        "text": "受不了了，闪了",
+        "positive_prob": 0.00400663,
+        "confidence": 0.991096,
+        "negative_prob": 0.995993,
+        "sentiment": 0
+    }
+]
