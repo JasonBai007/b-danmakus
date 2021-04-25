@@ -52,7 +52,9 @@ node report.js
 ## Useful Links
 1. [bilibili-api](https://github.com/Passkou/bilibili-api)
 2. [jieba](https://github.com/fxsjy/jieba)
-2. [b站弹幕系统改版后爬虫方法](https://www.bilibili.com/read/cv9762979/)
+3. [b站弹幕系统改版后爬虫方法](https://www.bilibili.com/read/cv9762979/)
+4. [echarts图表示例](https://echarts.apache.org/examples/zh/index.html)
+5. [易词云](https://www.yciyun.com/)
 
 ## Notes
 1. B站最新版的弹幕接口是：https://api.bilibili.com/x/v2/dm/web/seg.so
