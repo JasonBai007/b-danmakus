@@ -36,6 +36,9 @@ python cut.py
 
 ### Step 3 （循环弹幕数据，从百度智能云获取每条弹幕的情感值）
 ```
+// 设置 access_token 值，从百度智能云生成的
+编辑 request.js 文件
+
 // 执行脚本：生成附带情感值的弹幕数据JSON文件
 node request.js
 ```
@@ -48,6 +51,7 @@ node report.js
 
 ## Useful Links
 1. [bilibili-api](https://github.com/Passkou/bilibili-api)
+2. [jieba](https://github.com/fxsjy/jieba)
 2. [b站弹幕系统改版后爬虫方法](https://www.bilibili.com/read/cv9762979/)
 
 ## Notes
