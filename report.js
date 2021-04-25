@@ -40,10 +40,10 @@ if (mNum > 0) {
     })
 }
 
-// 生成关键词数据
-keyword.generateKeywordReport()
+// 生成TOP10关键词数据
+let top10 = keyword.generateKeywordReport()
 
-let report = `《${videoInfo.title}》弹幕情感分析报告：\n\n 该视频总计 ${total} 条弹幕 \n 正面情感弹幕 ${pNum} 条，占比 ${pRatio}% \n 负面情感弹幕 ${nNum} 条，占比 ${nRatio}% \n 中性情感弹幕 ${mNum} 条，占比 ${mRatio}%`
+let report = `《${videoInfo.title}》弹幕情感分析报告：\n\n 该视频总计 ${total} 条弹幕 \n 正面情感弹幕 ${pNum} 条，占比 ${pRatio}% \n 负面情感弹幕 ${nNum} 条，占比 ${nRatio}% \n 中性情感弹幕 ${mNum} 条，占比 ${mRatio}% \n\n 前十名关键词： \n ${top10.join('，')}`
 fs.writeFile(path.resolve(__dirname, './report/report.txt'), report, { encoding: 'utf8' }, err => {
     console.log('分析报告生成完成！')
 })

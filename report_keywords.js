@@ -20,7 +20,10 @@ exports.generateKeywordReport = function () {
     twoLevelArr.sort((a, b) => {
         return b[1] - a[1]
     })
-    fs.writeFile(path.resolve(__dirname, './report/keywords.json'), JSON.stringify(twoLevelArr, null, 4), { encoding: 'utf8' }, err => {
-        console.log('生成关键词数据成功！')
-    })
+    fs.writeFileSync(path.resolve(__dirname, './report/keywords.json'), JSON.stringify(twoLevelArr, null, 4), { encoding: 'utf8' })
+    console.log('生成关键词数据成功！')
+
+    // 返回前10名关键词
+    let top10 = twoLevelArr.slice(0, 10).map(arr => arr[0])
+    return top10
 }
