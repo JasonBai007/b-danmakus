@@ -3,7 +3,7 @@ get danmakus from Bilibili, and generate a report from the data.
 
 ## How to USE
 
-### Step 1 （从B站获取目标视频的弹幕数据）
+### Step 0 （配置环境，安装依赖）
 ```
 // 安装最新版本python，注意在安装前，在弹框下方勾选：Add Python 3.9 to PATH
 Install Python 3.x >=3.6 
@@ -12,6 +12,15 @@ Install Python 3.x >=3.6
 pip install bilibili-api
 pip install jieba
 
+// 安装最新版本的Node.js
+Install Node.js
+
+// 安装项目依赖
+npm install 
+```
+
+### Step 1 （从B站获取目标视频的弹幕数据）
+```
 // 设置目标视频的bvid
 编辑 bvid.py 文件
 
@@ -27,12 +36,6 @@ python cut.py
 
 ### Step 3 （循环弹幕数据，从百度智能云获取每条弹幕的情感值）
 ```
-// 需要提前安装最新版本的Node.js
-Install Node.js
-
-// 安装项目依赖：Axios模块
-npm install 
-
 // 执行脚本：生成附带情感值的弹幕数据JSON文件
 node request.js
 ```
