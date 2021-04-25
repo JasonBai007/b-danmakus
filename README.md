@@ -10,6 +10,7 @@ Install Python 3.x >=3.6
 
 // 安装第三方模块
 pip install bilibili-api
+pip install jieba
 
 // 设置目标视频的bvid
 编辑 bvid.py 文件
@@ -18,7 +19,13 @@ pip install bilibili-api
 python index.py
 ```
 
-### Step 2 （循环弹幕数据，从百度智能云获取每条弹幕的情感值）
+### Step 2 （循环弹幕数据，使用结巴分词，提取关键词）
+```
+// 切词，提取关键词
+python cut.py
+```
+
+### Step 3 （循环弹幕数据，从百度智能云获取每条弹幕的情感值）
 ```
 // 需要提前安装最新版本的Node.js
 Install Node.js
@@ -30,7 +37,7 @@ npm install
 node request.js
 ```
 
-### Step 3 （分析数据，生成弹幕情感报告）
+### Step 4 （分析数据，生成弹幕情感报告）
 ```
 // 执行脚本：生成分析报告
 node report.js
