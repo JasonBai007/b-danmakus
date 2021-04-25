@@ -2,6 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const videoInfo = require('./danmu/info.json')
 const resultArr = require('./result.json')
+const keyword = require('./report_keywords.js')
 
 let p = resultArr.filter(obj => obj.sentiment === 2)
 let m = resultArr.filter(obj => obj.sentiment === 1)
@@ -24,6 +25,8 @@ console.log(`负面情感弹幕 ${nNum} 条，占比 ${nRatio}%`)
 console.log(`中性情感弹幕 ${mNum} 条，占比 ${mRatio}%`)
 console.log(`生成测试报告中...`)
 
+
+
 fs.writeFile(path.resolve(__dirname, './report/positive.json'), JSON.stringify(p, null, 4), { encoding: 'utf8' }, err => {
     console.log('抽离正面数据成功！')
 })
@@ -36,6 +39,9 @@ if (mNum > 0) {
         console.log('抽离中性数据成功！')
     })
 }
+
+// 生成关键词数据
+keyword.generateKeywordReport()
 
 let report = `《${videoInfo.title}》弹幕情感分析报告：\n\n 该视频总计 ${total} 条弹幕 \n 正面情感弹幕 ${pNum} 条，占比 ${pRatio}% \n 负面情感弹幕 ${nNum} 条，占比 ${nRatio}% \n 中性情感弹幕 ${mNum} 条，占比 ${mRatio}%`
 fs.writeFile(path.resolve(__dirname, './report/report.txt'), report, { encoding: 'utf8' }, err => {
