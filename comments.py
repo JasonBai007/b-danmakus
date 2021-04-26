@@ -6,18 +6,32 @@ from bilibili_api.video import get_comments_g
 comments_generator = get_comments_g(BVID, order='like')
 
 comments = []
-comments_lite = []
 for comment in comments_generator:
     # 将评论项目加入列表，也就是普通的所有评论爬虫
     comments.append(comment)
-    comments_lite.append({
-        'content':comment['content']['message'],
-        'like':comment['like']
-    })
+    
+comments_lite = []
+for c in comments:
+    if c['replies'] is not None:
+        comments_lite.append({
+            'content':c['content']['message'],
+            'like':c['like']
+        })
+        for r in c['replies']:
+            comments_lite.append({
+                'content':r['content']['message'],
+                'like':r['like']
+            })
+    else:
+        comments_lite.append({
+            'content':c['content']['message'],
+            'like':c['like']
+        })
 
-print('已获取' + str(len(comments)) + '条评论')
+print('已获取' + str(len(comments_lite)) + '条评论')
 with open('./comments/comments_raw.json', 'w', encoding='utf-8') as file_object:
     file_object.write(json.dumps(comments, indent=2, ensure_ascii=False))
+
 
 with open('./comments/comments_lite.json', 'w', encoding='utf-8') as file_object:
     file_object.write(json.dumps(comments_lite, indent=2, ensure_ascii=False))
