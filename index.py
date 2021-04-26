@@ -2,7 +2,7 @@
 
 from bilibili_api import video
 import json
-from bvid import BVID
+from bvid import BVID, EPISODE
 
 # 获取视频信息并打印
 info = video.get_video_info(bvid=BVID)
@@ -14,8 +14,8 @@ filename0 = './danmu/info.json'
 with open(filename0, 'w', encoding='utf-8') as file_object:
     file_object.write(json.dumps(info, indent=2, ensure_ascii=False))
 
-# 假设这里获取 p1 的最新弹幕信息，需要取出 page_id，即每 p 都有自己的编号（其实就是视频选集）
-page_id = info["pages"][0]["cid"]
+# 视频选集：默认第1集
+page_id = info["pages"][EPISODE]["cid"]
 
 # 然后开始获取弹幕
 print('开始获取字幕数据...')
@@ -23,7 +23,7 @@ danmakus = video.get_danmaku(bvid=BVID, page_id=page_id)
 
 # 写入文件
 print('开始写入文件...')
-filename = './danmu/danmu_all.txt'
+filename = './danmu/danmu_raw.txt'
 with open(filename, 'w', encoding='utf-8') as file_object:
     # 将List类型的数据转成字符串类型，转之前需要把里面的数值型的转成字符串型的
     file_object.write('\n'.join('%s' %id for id in danmakus))
