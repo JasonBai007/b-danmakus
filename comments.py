@@ -1,3 +1,5 @@
+# coding=utf-8
+
 import json
 from bvid import BVID
 from bilibili_api.video import get_comments_g

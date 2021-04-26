@@ -1,4 +1,5 @@
-# 导入模块
+# coding=utf-8
+
 from bilibili_api import video
 import json
 from bvid import BVID
