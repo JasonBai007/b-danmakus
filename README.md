@@ -49,6 +49,12 @@ node request.js
 node report.js
 ```
 
+### Step 5 （获取视频评论数据）
+```
+// 执行脚本：生成分析报告
+python comments.py
+```
+
 ## Useful Links
 1. [bilibili-api](https://github.com/Passkou/bilibili-api)
 2. [jieba](https://github.com/fxsjy/jieba)
