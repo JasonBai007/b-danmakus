@@ -1,6 +1,7 @@
 # coding=utf-8
 
 import json
+import re
 from bvid import BVID
 from bilibili_api.video import get_comments_g
 
@@ -14,21 +15,26 @@ for comment in comments_generator:
     comments.append(comment)
 
 # 构建精简版列表
+# 需要过滤掉[dog]这类的表情字符
+# 需要过滤掉 "回复 @asdfasd :" 这类回复字符串
 comments_lite = []
 for c in comments:
     if c['replies'] is not None:
         comments_lite.append({
-            'content':c['content']['message'],
+            # 'content':c['content']['message'].replace(r"\[.*?\]",''),
+            'content': re.sub(r"\[.*?\]","",c['content']['message']),
             'like':c['like']
         })
         for r in c['replies']:
             comments_lite.append({
-                'content':r['content']['message'],
+                # 'content':r['content']['message'].replace(r"\[.*?\]",''),
+                'content': re.sub(r"(\[.*?\])|(回复.*:)","",r['content']['message']),
                 'like':r['like']
             })
     else:
         comments_lite.append({
-            'content':c['content']['message'],
+            # 'content':c['content']['message'].replace(r"\[.*?\]",''),
+            'content': re.sub(r"\[.*?\]","",c['content']['message']),
             'like':c['like']
         })
 
