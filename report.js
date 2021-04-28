@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const videoInfo = require('./danmu/info.json')
-const resultArr = require('./result.json')
+const resultArr = require('./sentiment/danmu_sentiment.json')
 const keyword = require('./report_keywords.js')
 
 let p = resultArr.filter(obj => obj.sentiment === 2)

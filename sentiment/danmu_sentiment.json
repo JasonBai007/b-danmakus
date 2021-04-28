@@ -16,6 +16,14 @@
         "sentiment": 2
     },
     {
+        "id": 2,
+        "text": "见封进",
+        "positive_prob": 0.2781,
+        "confidence": 0.382001,
+        "negative_prob": 0.7219,
+        "sentiment": 0
+    },
+    {
         "id": 3,
         "text": "tql tql",
         "positive_prob": 0.909288,
@@ -32,12 +40,36 @@
         "sentiment": 2
     },
     {
+        "id": 5,
+        "text": "Cao",
+        "positive_prob": 0.175767,
+        "confidence": 0.609407,
+        "negative_prob": 0.824233,
+        "sentiment": 0
+    },
+    {
         "id": 6,
         "text": "巨佬",
         "positive_prob": 0.981014,
         "confidence": 0.957808,
         "negative_prob": 0.0189864,
         "sentiment": 2
+    },
+    {
+        "id": 7,
+        "text": "卧槽，膜拜大佬",
+        "positive_prob": 0.0160421,
+        "confidence": 0.964351,
+        "negative_prob": 0.983958,
+        "sentiment": 0
+    },
+    {
+        "id": 8,
+        "text": "3090Ti？",
+        "positive_prob": 0.0322434,
+        "confidence": 0.928348,
+        "negative_prob": 0.967757,
+        "sentiment": 0
     },
     {
         "id": 9,
@@ -56,6 +88,22 @@
         "sentiment": 2
     },
     {
+        "id": 11,
+        "text": "电脑烧坏啦",
+        "positive_prob": 0.00499407,
+        "confidence": 0.988902,
+        "negative_prob": 0.995006,
+        "sentiment": 0
+    },
+    {
+        "id": 12,
+        "text": "啊这",
+        "positive_prob": 0.391685,
+        "confidence": 0.12959,
+        "negative_prob": 0.608315,
+        "sentiment": 0
+    },
+    {
         "id": 13,
         "text": "学好数理化",
         "positive_prob": 0.997871,
@@ -72,12 +120,36 @@
         "sentiment": 2
     },
     {
+        "id": 15,
+        "text": "电脑烧坏啦",
+        "positive_prob": 0.00499407,
+        "confidence": 0.988902,
+        "negative_prob": 0.995006,
+        "sentiment": 0
+    },
+    {
         "id": 16,
         "text": "NB",
         "positive_prob": 0.97792,
         "confidence": 0.950934,
         "negative_prob": 0.0220798,
         "sentiment": 2
+    },
+    {
+        "id": 17,
+        "text": "？？？？",
+        "positive_prob": 0.0000235748,
+        "confidence": 0.999948,
+        "negative_prob": 0.999976,
+        "sentiment": 0
+    },
+    {
+        "id": 18,
+        "text": "电脑烧坏啦",
+        "positive_prob": 0.00499408,
+        "confidence": 0.988902,
+        "negative_prob": 0.995006,
+        "sentiment": 0
     },
     {
         "id": 19,
@@ -102,6 +174,22 @@
         "confidence": 0.828846,
         "negative_prob": 0.0770193,
         "sentiment": 2
+    },
+    {
+        "id": 22,
+        "text": "恐怖如斯",
+        "positive_prob": 0.00643795,
+        "confidence": 0.985693,
+        "negative_prob": 0.993562,
+        "sentiment": 0
+    },
+    {
+        "id": 23,
+        "text": "這CPU會不會爆炸啊",
+        "positive_prob": 0.0172645,
+        "confidence": 0.961634,
+        "negative_prob": 0.982736,
+        "sentiment": 0
     },
     {
         "id": 24,
