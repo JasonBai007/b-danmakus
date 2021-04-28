@@ -1,4 +1,5 @@
 # encoding=utf-8
+# 对弹幕进行分词，并提取关键词
 
 import json
 import jieba
