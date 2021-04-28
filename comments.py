@@ -1,4 +1,5 @@
 # coding=utf-8
+# 获取视频评论数据
 
 import json
 import re
@@ -38,10 +39,10 @@ for c in comments:
             'like':c['like']
         })
 
-# 对精简版列表进行排序
 def likeSort(obj):
     return obj['like']
 
+# 对精简版列表进行排序
 comments_lite.sort(key=likeSort, reverse=True)
 
 # 写入文件

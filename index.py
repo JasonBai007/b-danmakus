@@ -1,4 +1,5 @@
 # coding=utf-8
+# 获取视频信息和字幕数据
 
 import json
 from bilibili_api import video
