@@ -1,13 +1,13 @@
 # coding=utf-8
 
-from bilibili_api import video
 import json
+from bilibili_api import video
 from bvid import BVID, EPISODE
 
 # 获取视频信息并打印
 info = video.get_video_info(bvid=BVID)
-print('获取视频信息BVID：'+ info['bvid'])
-print('获取视频信息TITLE：'+ info['title'])
+print('视频BVID：'+ info['bvid'])
+print('视频TITLE：'+ info['title'])
 
 # 为视频信息生成文件
 filename0 = './danmu/info.json'
@@ -33,11 +33,6 @@ danTextList = []
 for dm in danmakus:
     # 每条弹幕包括时间、内容等信息，是个Class
     danTextList.append(dm.text)
-
-# 生成弹幕文本文件
-filename2 = './danmu/danmu_text.txt'
-with open(filename2, 'w', encoding='utf-8') as file_object:
-    file_object.write('\n'.join(danTextList))
 
 # 生成弹幕JSON文件
 filename3 = './danmu/danmu_text.json'
