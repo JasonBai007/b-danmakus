@@ -27,7 +27,8 @@ for str in danmuArr:
     # withWeight表示是否返回权重，是的话返回(word,weight)的list
     # allowPOS仅包括指定词性的词，默认为空即不筛选
     # key_word = jieba.analyse.textrank(str, topK=10, withWeight=False, allowPOS=['ns','n','vn','v'], withFlag=False)
-    key_word = jieba.analyse.extract_tags(str, withWeight=False, withFlag=False)
+    # 依次过滤出：地名、名词、名动次、动词、形容词
+    key_word = jieba.analyse.extract_tags(str, withWeight=False, withFlag=False, allowPOS=('ns', 'n', 'vn', 'v','a'))
     danmu_keyword.append(key_word)
 
 with open('./fenci/danmu_keyword.json', 'w', encoding='utf-8') as file_object:
